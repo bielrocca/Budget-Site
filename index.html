@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Calculo de Orçamento</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(./img/office.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="total-amount-container">
+                    <h3>Orçamento</h3>
+                    <p class="hide error" id="budget-error">
+                        O valor não pode estar vazio ou negativo
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Entre com a Quantia Total">
+                    <button class="submit" id="total-amount-button">
+                        Coloque o Orçamento
+                    </button>
+                </div>
+
+                <div class="user-amount-container">
+                    <h3>Despesas</h3>
+                    <p class="hide error" id="product-title-error">
+                        O valor não pode estar vazio
+                    </p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Entre com o Nome do Produto">
+                    <input type="number" id="user-amount" placeholder="Entre com o Preço do Produto">
+                    <button class="submit" id="check-amount">Valor do cheque</button>
+                </div>
+            </div>
+
+            <div class="output-container flex-space">
+                <div>
+                    <p>Total do Orçamento</p>
+                    <span id="amount">
+                        R$0
+                    </span>
+                </div>
+                <div>
+                    <p>Despesas</p>
+                    <span id="expenditure-value">
+                        R$0
+                    </span>
+                </div>
+                <div>
+                    <p>Equilíbrio</p>
+                    <span id="balance-amount">
+                        R$0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Lista de Despesas</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
